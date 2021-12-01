@@ -23,10 +23,11 @@ if (error) {
 }
 else{
     console.log("Connection to MongoDB was successful");
+    
+    //listen to the incoming request on this port
+app.listen(port, ()=>console.log(`server is  running and active on: ${PORT}`)
+);
 }
 
 
 });
-//listen to the incoming request on this port
-app.listen(port, ()=>console.log(`server is  running and active on: ${PORT}`)
-);
