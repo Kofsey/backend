@@ -1,7 +1,8 @@
 //import the express package
-import express, { response } from "express";
+import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
+
 //creating an instace of express
 const app=express();
 
@@ -11,8 +12,8 @@ import mongoose from "mongoose";
 const PORT= process.env.PORT?? 5000;
 
 // create a path  to handle GET request o the index route
-app.get("/", (request, response)=>{
-    response.send("Hello World");
+app.get("/", (req, res)=>{
+    res.send("Hello World");
 });
 
 mongoose.connect(process.env.mongo_DB_CONTRING, (error)=>{
